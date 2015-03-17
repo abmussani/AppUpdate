@@ -31,6 +31,7 @@ After getting response from lookup service, This class will compare current vers
 ### Using blocks 
 
 ```
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     AppUpdateNotifier *appUpdateNotifier = [AppUpdateNotifier sharedInstance];
     
     [appUpdateNotifier checkNowWithBlock:^(NSError *error, NSString *currentVersion, NSString *itunesVersion, ApplicationInformation *appInfo, BOOL isUpdateAvailable) {
@@ -45,4 +46,5 @@ After getting response from lookup service, This class will compare current vers
             NSLog(@"Is Update Available: %@", isUpdateAvailable? @"Yes" : @"No");
         }
     }];
+}
 ```
