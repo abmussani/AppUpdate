@@ -31,8 +31,7 @@ After getting response from lookup service, This class will compare current vers
 ### Using blocks 
 
 ```
-AppUpdateNotifier *appUpdateNotifier = [AppUpdateNotifier sharedInstance];
-    appUpdateNotifier.delegate = self;
+    AppUpdateNotifier *appUpdateNotifier = [AppUpdateNotifier sharedInstance];
     
     [appUpdateNotifier checkNowWithBlock:^(NSError *error, NSString *currentVersion, NSString *itunesVersion, ApplicationInformation *appInfo, BOOL isUpdateAvailable) {
         if(error != nil)
